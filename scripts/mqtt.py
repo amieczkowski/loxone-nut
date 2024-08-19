@@ -170,7 +170,7 @@ def on_message(client, userdata, msg):
 
         battery_mode = payload.split("=")[1]
 
-        if battery_mode == 1:
+        if battery_mode == "1":
             if stored_state_of_charge > UPS_LOW_BATTERY_THRESHOLD:
                 ups_status = "OB"
             else:
