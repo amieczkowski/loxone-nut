@@ -222,9 +222,11 @@ if __name__ == "__main__":
 
     # UPS parameters
     BATTERY_VOLTAGE = 36  # Loxone specific
-    BATTERY_CAPACITY = get_env_var("BATTERY_CAPACITY")
+    BATTERY_CAPACITY = int(get_env_var("BATTERY_CAPACITY"))
     UPS_EFFICIENCY = 0.94  # Loxone specific
-    UPS_LOW_BATTERY_THRESHOLD = get_env_var("UPS_LOW_BATTERY_THRESHOLD")
+    UPS_LOW_BATTERY_THRESHOLD = int(get_env_var("UPS_LOW_BATTERY_THRESHOLD"))
+    
+    DEBUG = get_env_var("DEBUG")
 
     client = mqtt.Client()
     client.username_pw_set(MQTT_USERNAME, MQTT_PASSWORD)
