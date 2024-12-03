@@ -1,0 +1,27 @@
+battery.charge: 100
+battery.charge.low: 10
+battery.charge.warning: 20
+battery.runtime: 2550
+battery.runtime.low: 600
+battery.type: PbAc
+battery.voltage: 41.1
+battery.voltage.nominal: 36.0
+device.mfr: Loxone
+device.model: Power Supply & Backup
+device.type: ups
+driver.parameter.pollfreq: 30
+driver.parameter.pollinterval: 5
+input.sensitivity: medium
+input.transfer.high: 266
+input.transfer.low: 180
+input.voltage: 230.0
+input.voltage.nominal: 230
+ups.beeper.status: disabled
+ups.delay.shutdown: 20
+ups.load: 0
+ups.mfr: Loxone
+ups.model: Power Supply & Backup
+ups.status: OL
+ups.timer.reboot: 0
+ups.timer.shutdown: -1
+ups.vendorid: 051d

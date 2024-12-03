@@ -1,0 +1,22 @@
+version: '3.6'
+
+services:
+  nut:
+    build: . # Build the image from the current directory
+    image: nut_container # Name of the image to be built
+    restart: unless-stopped
+    ports:
+      - "3493:3493"
+    environment:
+      - DEBUG=False
+      - MQTT_SERVER=
+      - MQTT_PORT=1883
+      - MQTT_KEEPALIVE_INTERVAL=60
+      - MQTT_UPS_TOPIC=UPS
+      - MQTT_USERNAME=
+      - MQTT_PASSWORD=
+      - UPS_USERNAME=
+      - UPS_PASSWORD=    
+      - BATTERY_CAPACITY=
+      - UPS_LOW_BATTERY_THRESHOLD=10
+    entrypoint: ["/opt/scripts/start.sh"] # Start the script
